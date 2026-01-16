@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sneha Gandla | Data Analytics Engineer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-main: #fff4ec;
+      --card-bg: rgba(255,255,255,0.85);
+      --accent: #c08b5c;
+      --text-main: #3a2f2a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background:
+        linear-gradient(rgba(255,244,236,0.9), rgba(255,244,236,0.95)),
+        url("https://images.unsplash.com/photo-1526045612212-70caf35c14df");
+      background-size: cover;
+      background-attachment: fixed;
+      color: var(--text-main);
+      overflow-x: hidden;
+    }
+
+    /* floating cute elements */
+    .float {
+      position: absolute;
+      font-size: 2.5rem;
+      opacity: 0.5;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .f1 { top: 15%; left: 10%; }
+    .f2 { top: 25%; right: 12%; animation-delay: 1s; }
+    .f3 { bottom: 15%; left: 5%; animation-delay: 2s; }
+    .f4 { bottom: 20%; right: 8%; animation-delay: 3s; }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(10px);
+      padding: 12px 30px;
+      border-radius: 40px;
+      display: flex;
+      gap: 25px;
+      z-index: 100;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    /* HERO */
+    header {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 30px;
+      border: 8px solid white;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 4.5rem);
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 1.4rem;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 30px;
+      background: white;
+      color: var(--accent);
+      font-weight: 700;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .full {
+      grid-column: span 2;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      margin-bottom: 5px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .contact-item i {
+      color: var(--accent);
+      font-size: 1.2rem;
+      width: 25px;
+      text-align: center;
+    }
+
+    .social-link {
+      color: var(--text-main);
+      text-decoration: none;
+      border-bottom: 1px dashed var(--accent);
+      transition: 0.3s;
+    }
+
+    .social-link:hover {
+      color: var(--accent);
+      border-bottom: 1px solid var(--accent);
+    }
+
+    .project {
+      margin-bottom: 15px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #fff;
+      padding: 8px 18px;
+      border-radius: 30px;
+      margin: 5px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+
+    @media(max-width:768px){
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .full {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="float f1">🌸</div>
+  <div class="float f2">☁️</div>
+  <div class="float f3">🍃</div>
+  <div class="float f4">✨</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+  </nav>
+
+  <header id="home">
+    <img src="profile.jpg" alt="Sneha Gandla" class="profile-img">
+    <h1>Sneha Gandla</h1>
+    <div class="subtitle">Data Analytics Engineer</div>
+    <a href="resume.pdf" class="btn" target="_blank">View Resume</a>
+  </header>
+
+  <section class="container">
+
+    <div class="card full" id="about">
+      <h2>About Me</h2>
+      <p>
+        Final-year B.Tech student specializing in Data Science. I enjoy working with data,
+        building analytical solutions, and extracting meaningful insights that support
+        decision-making.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Education</h2>
+      <h3>Bharat Institute of Engineering & Technology</h3>
+      <p>B.Tech CSE (Data Science)<br>2022 – 2026</p>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <div class="contact-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Hyderabad</span>
+      </div>
+      
+      <div class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <a class="social-link" href="mailto:snehagandla30@gmail.com">snehagandla30@gmail.com</a>
+      </div>
+      
+      <div class="contact-item">
+        <i class="fa-brands fa-linkedin"></i>
+        <a class="social-link" target="_blank" href="https://www.linkedin.com/in/snehagandla">LinkedIn Profile</a>
+      </div>
+      
+      <div class="contact-item">
+        <i class="fa-brands fa-medium"></i>
+        <a class="social-link" target="_blank" href="https://medium.com/@snehagandla30">Medium Profile</a>
+      </div>
+    </div>
+
+    <div class="card full" id="projects">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>YouTube Comment Sentiment Analysis</h3>
+        <p>Natural Language Processing project using Python and NLTK to analyze audience sentiment.</p>
+      </div>
+
+      <div class="project">
+        <h3>E-Consultation Sentiment Analyzer</h3>
+        <p>Machine Learning model for healthcare feedback analysis. Won 3rd Prize at SIH 2025 internal hackathon.</p>
+      </div>
+
+      <div class="project">
+        <h3>SPAM SMS Detection System</h3>
+        <p>Text classification model using Scikit-learn to detect spam messages accurately.</p>
+      </div>
+
+      <div class="project">
+        <h3>Movie Genre Prediction</h3>
+        <p>Machine Learning classification using metadata and textual features.</p>
+      </div>
+
+      <div class="project">
+        <h3>Bank Churn Prediction</h3>
+        <p>Predictive analytics project identifying customer churn using supervised learning.</p>
+      </div>
+    </div>
+
+    <div class="card full">
+      <h2>Hobbies & Interests</h2>
+      <span class="tag">✍️ Writing & Blogging</span>
+      <span class="tag">📖 Fiction Writing</span>
+      <span class="tag">✒️ Editing</span>
+      <span class="tag">🎨 UI Design</span>
+      <span class="tag">📊 Finding Insights in Data</span>
+      <span class="tag">🎬 Story-Driven Films</span>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Sneha Gandla • Hyderabad
+  </footer>
+
+</body>
+</html>
